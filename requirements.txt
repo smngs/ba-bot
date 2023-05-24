@@ -1,0 +1,8 @@
+discord
+openai
+pytz
+pynacl
+aiohttp
+aiodns
+ujson
+arxiv

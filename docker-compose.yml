@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build: .
+    container_name: app
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/root/src
+    environment:
+      DISCORD_API_KEY: ${DISCORD_API_KEY}
+      DISCORD_SERVER_ID: ${DISCORD_SERVER_ID}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+    command:
+      python app.py
+    tty: yes
